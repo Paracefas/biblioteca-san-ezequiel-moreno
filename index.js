@@ -145,7 +145,7 @@ async function open_dialog_lend (obj_hash, lended, cite) {
 	        From : "biblioteca.san.ezequiel@gmail.com",
 	        Subject : "Biblioteca San Ezequiel Moreno",
 	        Body : Body.Name + " se te ha concedido en carácter de prestamo el Libro: " + cite +
-                ".\nTe recordamos que debes regresarlo antes de 15 días (" + date_str(new Date().addDays(15)) + "), cuando lo hagas déjalo sobre una mesa (No guardar en los estantes). También recordá que debes destildar el libro en " + URL + "."
+                ".\nTe recordamos que debes regresarlo antes de 15 días (" + date_str(new Date().addDays(15)) + "), cuando lo hagas déjalo sobre una mesa (No guardar en los estantes). También recordá que debes destildar el libro en https://paracefas.github.io/biblioteca-san-ezequiel-moreno/"
 	    }).then(
 		    message => console.log("Mail sent")
 	    );
