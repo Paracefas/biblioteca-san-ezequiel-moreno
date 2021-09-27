@@ -154,7 +154,7 @@ async function open_dialog_lend (obj_hash, lended, cite) {
 
 async function src_by(by) {
     const to_src = document.getElementById("to_src").value;
-    const rawResponse = await fetch(URL + by + "/" + to_src);
+    const rawResponse = await fetch(URL + by + to_src);
     const content = await rawResponse.json();
     document.getElementById("img").style.display = "none";
     document.getElementById("src_box").style.paddingTop = "10px";
