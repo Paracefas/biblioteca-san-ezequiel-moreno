@@ -1,4 +1,4 @@
-const debug = "https://paracefas-library-api.herokuapp.com/";
+const debug = "https://paracefas-library-api.herokuapp.com";
 const URL = debug + "/api/books/";
 const LOGIN = debug + "/login";
 const LEND = URL + "lend";
