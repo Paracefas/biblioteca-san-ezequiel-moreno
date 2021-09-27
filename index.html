@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta charset="UTF-8" content="Biblioteca San Ezequiel Moreno">
+      <style>
+        #results {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+        #results td, #results th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        }
+        #result-cite {
+        font-style: italic;
+        }
+        #results tr:nth-child(even){
+        background-color: #f2f2f2;
+        }
+        #results tr:hover {
+        background-color: #ddd;
+        }
+        #results th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #3366ff;
+        color: white;
+        }
+        <!-- popup -->
+        .box {
+        width: 40%;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.2);
+        padding: 35px;
+        border: 2px solid #fff;
+        border-radius: 20px/50px;
+        background-clip: padding-box;
+        text-align: center;
+        }
+        .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+        }
+        .overlay:target {
+        visibility: visible;
+        opacity: 1;
+        }
+
+        .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+        }
+        .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+        }
+        .popup .close:hover {
+        color: #06D85F;
+        }
+        .popup .content {
+        max-height: 30%;
+        overflow: auto;
+        }
+
+        @media screen and (max-width: 700px){
+        .box{
+        width: 70%;
+        }
+        .popup{
+        width: 70%;
+        }
+        }
+      </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Biblioteca San Ezequiel Moreno</title>
+    <script src="./index.js"> </script>
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container_main">
+			<div id="img" class="logo"><img src="img/escudo-oar.png"></div>
+			<div id="src_box" class="searchbox">
+			  <input type="text" id="to_src">
+			  </div>
+			<div class="container_buttons_search">
+				<a href="#" onclick="src_by('Author')"><div class="google_search button_search">Buscar por autor</div></a>
+				<a href="#" onclick="src_by('Name')"><div class="feeling_lucky button_search">Buscar por libro</div></a>
+
+                <div id="lend_data" class="overlay">
+	              <div class="popup">
+		            <strong>Datos del que pide el libro</strong><br><br>
+		            <a class="close" href="#">&times;</a>
+		            <div class="content">
+			          <input type="text" id="lend-name" placeholder="Juan Pérez"></input><br><br>
+		              <input type="text" id="lend-email" placeholder="juan_perez@gmail.com"></input><br><br>
+		              <input type="text" id="lend-mobile" placeholder="1155443322"></input>
+                      <br><br>
+                      <a href="#" id="lend-btn"><div class="feeling_lucky button_search">Pedir</div></a>
+                    </div>
+	              </div>
+                </div>
+
+            </div>
+		  </div>
+          <div id="src-content"> </div>
+		<div class="footer">
+			<div class="footer_right">
+			  <ul>
+                <li><a href="./login.html">Administrar</a></li>
+				<li><a href="#">By Emanuel Clur</a></li>
+			  </ul>
+			</div>
+            
+		</div>
+	  </div>
+
+</body>
+</html>
